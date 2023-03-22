@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/upload.css">
     <title>Upload</title>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
-    <script src="/server.js"></script>
     <h1 class="heading">Upload Your Files</h1>
     <form action="fileupload" enctype="multipart/form-data" method="post">
         <!-- <div class="form"> -->
         <div class="input">
-            <input type="text" name="name" id="nam" placeholder="Name">
+            <input type="text" name="name" id="nam" placeholder="Name" required>
         </div>
         <div class="input">
-            <input type="text" name="rollno" id="roll" placeholder="Roll No">
+            <input type="text" name="rollno" id="roll" placeholder="Roll No" required>
         </div>
         <div class="select">
-            <select name="category" id="cat">
+            <select name="category" id="cat" required>
                 <option value="textbook">Textbook</option>
                 <option value="assignexp">Assign & Exp</option>
                 <option value="solution">Solution</option>
@@ -29,7 +29,7 @@
             </select>
         </div>
         <div class="select">
-            <select name="subject" id="sub">
+            <select name="subject" id="sub" required>
                 <option value="em4">EM4</option>
                 <option value="aoa">AOA</option>
                 <option value="dbms">DBMS</option>
@@ -39,16 +39,19 @@
             </select>
         </div>
         <div class="input">
-            <input type="text" name="filename" id="file" placeholder="File Name">
+            <input type="text" name="filename" id="file" placeholder="File Name" required>
         </div>
         <div class="input">
-            <input type="file" name="filetoupload" id="upload">
+            <input type="file" name="filetoupload" id="upload" required>
         </div>
         <div class="button">
-            <button type="submit" value="submit">Submit</button>
+            <button type="submit" value="submit" onclick="saveFile()">Submit</button>
         </div>
         <!-- </div> -->
     </form>
+    <div class="success" id="success">
+        <p style="color:green;">File Uploaded Successfully</p>
+    </div>
 </body>
 
 </html>

@@ -34,3 +34,14 @@ select, button {
     width: 100%;
     padding: 10px;
 }
+
+.success {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.success p {
+    display: none;
+}
