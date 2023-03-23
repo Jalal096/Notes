@@ -9,7 +9,7 @@ const data = require('../public/js/script');
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
-console.log(data)
+
 router.post('/fileupload', function (req, res) {
   var form = new formidable.IncomingForm();
   form.parse(req, function (err, fields, files) {
@@ -19,7 +19,6 @@ router.post('/fileupload', function (req, res) {
       if (err) {
         res.write("Oops!! Something went wrong")
       }
-      // res.write("Uploaded")
       console.log(data)
       res.redirect('upload.html')
       res.end();
