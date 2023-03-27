@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/upload.css">
     <title>Upload</title>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
-    <script src="js/script.js"></script>
     <h1 class="heading">Upload Your Files</h1>
     <form action="fileupload" enctype="multipart/form-data" method="post">
         <!-- <div class="form"> -->
@@ -22,9 +22,9 @@
         </div>
         <div class="select">
             <select name="category" id="cat" required>
-                <option value="textbook">Textbook</option>
-                <option value="assignexp">Assign & Exp</option>
-                <option value="solution">Solution</option>
+                <option value="notebooks">Textbook</option>
+                <option value="assignments">Assign & Exp</option>
+                <option value="solutions">Solution</option>
                 <option value="questionpaper">Question Paper</option>
             </select>
         </div>
@@ -45,7 +45,7 @@
             <input type="file" name="filetoupload" id="upload" required>
         </div>
         <div class="button">
-            <button type="submit" value="submit" onclick="saveFile()">Submit</button>
+            <button type="submit" value="submit">Submit</button>
         </div>
         <!-- </div> -->
     </form>

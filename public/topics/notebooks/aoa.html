@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/notebooks.css">
-    <title>EM4</title>
+    <title>AOA</title>
 </head>
+
 <body>
     <h1 class="heading">Notebooks</h1>
-    <ul>
-        <li><a href="aoa/AOA_easy_solution.pdf" target="_blank">AOA Easy Solutions</a></li>
-    </ul>
+    <script type="module">
+        import { data } from '../notebooks/script.js'
+        console.log(data)
+        const ul = document.createElement('ul')
+        const li = document.createElement('li')
+        const a = document.createElement('a')
+        document.body.appendChild(ul)
+        ul.appendChild(li)
+        li.appendChild(a)
+        a.setAttribute("href", `aoa/AOA_easy_solution.pdf`)
+        a.setAttribute("target", "_blank")
+        let txt = document.createTextNode("hello")
+        a.appendChild(txt)
+    </script>
 </body>
+
 </html>
