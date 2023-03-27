@@ -1,0 +1,78 @@
+<% data %>
+<% subject %>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= subject.toUpperCase() %></title>
+    </head>
+
+    <body>
+        <h1 class="heading">Notebooks</h1>
+        <ul>
+            <% for(let i=0; i<data.length; i++) { %>
+                <li><a href="<%=subject%>/<%=data[i] %>"><%=data[i]%></a></li>
+                <% } %>
+        </ul>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Poppins, sans-serif;
+            }
+            
+            .sem {
+                height: 100vh;
+            }
+            
+            .heading {
+                width: 100%;
+                background-color: rgb(41, 41, 41);
+                color: white;
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            .whitespace {
+                padding-top: 50px;
+            }
+            
+            .heading h1 {
+                font-size: 30px;
+            }
+            
+            .children {
+                width: 100%;
+            }
+            
+            .childrens {
+                margin: auto;
+                padding: auto;
+                width: 30%;
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            .childrens a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            ul {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            ul li a {
+                text-decoration: none;
+                color: black;
+                padding-bottom: 20px;
+            }
+            
+        </style>
+    </body>
+
+    </html>
