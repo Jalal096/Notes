@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const formidable = require('formidable');
 const fs = require('fs');
+const { exec } = require("child_process");
 const notebooks = require('../public/topics/notebooks/script.js')
 const assignment = require('../public/topics/assignments/script.js')
 const qps = require('../public/topics/questionpaper/script.js')
@@ -119,10 +120,24 @@ router.post('/fileupload', function (req, res) {
       if (err) {
         res.write("Oops!! Something went wrong")
       }
+      /*exec("nodemon start", (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+    });*/
+    
       res.redirect('upload.html')
       res.end();
     });
   });
 })
+
+
 
 module.exports = router;
