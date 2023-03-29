@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+console.log(path)
 
 const aoaFolder = path.join(__dirname, 'aoa');
 const dbmsFolder = path.join(__dirname, 'dbms');
