@@ -1,9 +1,11 @@
-const aoaFolder = 'C:\\Users\\lenovo\\OneDrive\\Documents\\GitHub\\Notes\\public\\topics\\solutions\\aoa\\';
-const dbmsFolder = 'C:\\Users\\lenovo\\OneDrive\\Documents\\GitHub\\Notes\\public\\topics\\solutions\\dbms\\';
-const osFolder = 'C:\\Users\\lenovo\\OneDrive\\Documents\\GitHub\\Notes\\public\\topics\\solutions\\os\\';
-const mpFolder = 'C:\\Users\\lenovo\\OneDrive\\Documents\\GitHub\\Notes\\public\\topics\\solutions\\mp\\';
-const em4Folder = 'C:\\Users\\lenovo\\OneDrive\\Documents\\GitHub\\Notes\\public\\topics\\solutions\\em4\\';
-const pyFolder = 'C:\\Users\\lenovo\\OneDrive\\Documents\\GitHub\\Notes\\public\\topics\\solutions\\python\\';
+const path = require('path')
+
+const aoaFolder = path.join(__dirname, 'aoa');
+const dbmsFolder = path.join(__dirname, 'dbms');
+const osFolder = path.join(__dirname, 'os');
+const mpFolder = path.join(__dirname, 'mp');
+const em4Folder = path.join(__dirname, 'em4');
+const pyFolder = path.join(__dirname, 'python');
 const fs = require('fs');
 const aoa = fs.readdirSync(aoaFolder)
 const dbms = fs.readdirSync(dbmsFolder)
