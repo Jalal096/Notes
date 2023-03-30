@@ -120,20 +120,7 @@ router.post('/fileupload', function (req, res) {
       if (err) {
         res.write("Oops!! Something went wrong")
       }
-      /*exec("nodemon start", (error, stdout, stderr) => {
-        if (error) {
-            console.log(`error: ${error.message}`);
-            return;
-        }
-        if (stderr) {
-            console.log(`stderr: ${stderr}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-    });*/
-    
-      res.redirect('upload.html')
-      res.end();
+      return res.redirect('upload.html')
     });
   });
 })
